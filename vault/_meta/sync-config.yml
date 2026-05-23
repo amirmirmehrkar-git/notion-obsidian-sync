@@ -1,0 +1,19 @@
+repo:
+  owner: amirmirmehrkar-git
+  name: notion-obsidian-sync
+  branch: main
+
+notion:
+  scope: all_accessible_pages
+
+sync:
+  mode:
+    first_run: full
+    next_runs: diffs
+  approval: every_change
+  conflict_policy: ask_user
+
+mapping:
+  tags:
+    notion_property_name: "Tags"   # اگر property دیگری دارید بعداً تغییر می‌دهیم
+    obsidian_frontmatter_key: "tags"
