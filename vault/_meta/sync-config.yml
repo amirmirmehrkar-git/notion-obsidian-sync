@@ -4,9 +4,12 @@ repo:
   branch: main
 
 notion:
-  scope: all_accessible_pages
+  # A future sync consumer must validate this mode and fail closed.
+  scope: explicit_pages
+  page_ids: []
 
 sync:
+  enabled: false
   mode:
     first_run: full
     next_runs: diffs
@@ -15,5 +18,5 @@ sync:
 
 mapping:
   tags:
-    notion_property_name: "Tags"   # اگر property دیگری دارید بعداً تغییر می‌دهیم
+    notion_property_name: "Tags"
     obsidian_frontmatter_key: "tags"
